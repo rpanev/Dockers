@@ -1,5 +1,5 @@
 FROM jenkins/jenkins
-LABEL maintainer="vByte DveOps tool`s"
+LABEL maintainer="Jenkins"
 
 USER root
 
