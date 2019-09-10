@@ -1,0 +1,16 @@
+version: '3'
+services:
+  jenkins:
+    container_name: jenkins
+    image: vbyteorg/jenkins
+    ports:
+      - "8080:8080"
+    volumes:
+      - $PWD/jenkins_home:/var/jenkins_home
+      - $PWD/ansible:/var/jenkins_home/ansible
+      - $PWD/git:/var/jenkins_home/git
+      - $PWD/.aws:/var/jenkins_home/.aws
+    networks:
+      - net
+networks:
+  net:
